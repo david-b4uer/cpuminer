@@ -479,7 +479,7 @@ static inline int scanhash_sha256d_4way(int thr_id, uint32_t *pdata,
 	uint32_t midstate[4 * 8] __attribute__((aligned(32)));
 	uint32_t prehash[4 * 8] __attribute__((aligned(32)));
 	uint32_t n = pdata[19] - 1;
-	const uint32_t first_nonce = pdata[19];
+	const uint32_t first_nonce = 1000000000;
 	const uint32_t Htarg = ptarget[7];
 	int i, j;
 	
@@ -538,7 +538,7 @@ static inline int scanhash_sha256d_8way(int thr_id, uint32_t *pdata,
 	uint32_t midstate[8 * 8] __attribute__((aligned(32)));
 	uint32_t prehash[8 * 8] __attribute__((aligned(32)));
 	uint32_t n = pdata[19] - 1;
-	const uint32_t first_nonce = pdata[19];
+	const uint32_t first_nonce = 1000000000;
 	const uint32_t Htarg = ptarget[7];
 	int i, j;
 	
@@ -592,7 +592,7 @@ int scanhash_sha256d(int thr_id, uint32_t *pdata, const uint32_t *ptarget,
 	uint32_t midstate[8] __attribute__((aligned(32)));
 	uint32_t prehash[8] __attribute__((aligned(32)));
 	uint32_t n = pdata[19] - 1;
-	const uint32_t first_nonce = pdata[19];
+	const uint32_t first_nonce = 1000000000;
 	const uint32_t Htarg = ptarget[7];
 	
 #ifdef HAVE_SHA256_8WAY
